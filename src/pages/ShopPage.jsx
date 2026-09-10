@@ -19,7 +19,27 @@ export function ShopPage() {
 
   return (
     <section className="shop-page">
-      <h1>Products</h1>
+      <div className="shop-hero">
+        <div className="shop-hero-content">
+          <p className="shop-eyebrow">Our collection</p>
+
+          <h1>Discover something new.</h1>
+
+          <p>
+            Browse our collection and choose exactly what belongs in your cart.
+          </p>
+        </div>
+
+        <div className="product-count">
+          <strong>{products.length}</strong>
+          <span>products available</span>
+        </div>
+      </div>
+
+      <div className="product-section-heading">
+        <h2>All products</h2>
+        <p>Select a quantity and add your favorites to the cart.</p>
+      </div>
 
       <div className="product-grid">
         {products.map((product) => (
