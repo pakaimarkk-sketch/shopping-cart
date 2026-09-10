@@ -161,6 +161,20 @@
 @media (max-width: 850px) {
   .home-hero {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .home-content,
+  .home-showcase {
+    padding: 1.5rem;
+  }
+
+  .home-content h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .home-showcase h2 {
+    font-size: 2rem;
   }
 
   .home-features {
