@@ -173,16 +173,41 @@
   background-color: #1d4ed8;
 }
 
+@media (max-width: 700px) {
+  .shop-hero {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .shop-hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .product-count {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .product-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
 @media (max-width: 500px) {
   .product-grid {
     grid-template-columns: 1fr;
   }
 
   .product-card-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .product-price {
     font-size: 1.6rem;
   }
 }
+
