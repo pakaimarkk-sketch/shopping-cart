@@ -1,3 +1,5 @@
+import "./QuantityControl.css";
+
 export function QuantityControl({
   quantity,
   onIncrement,

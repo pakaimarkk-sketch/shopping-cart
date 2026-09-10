@@ -26,7 +26,7 @@ export function ProductCard({ item, onAddToCart }) {
           onChange={change}
         />
 
-        <button type="button" onClick={handleAddToCart}>
+        <button className="add-to-cart" type="button" onClick={handleAddToCart}>
           Add to cart
         </button>
       </div>

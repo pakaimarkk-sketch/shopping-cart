@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchProducts } from "../api/productsApi";
 import { ProductCard } from "../components/ProductCard";
 import { useOutletContext } from "react-router";
+import "./ShopPage.css";
 
 export function ShopPage() {
   const [products, setProducts] = useState([]);

@@ -12,7 +12,9 @@ export function CartItem({ item, onUpdateQuantity, onRemove }) {
       <div className="cart-item-content">
         <h2>{item.name}</h2>
 
-        <p>Unit price: ${item.price.toFixed(2)}</p>
+        <p className="cart-item-unit-price">
+          Unit price: ${item.price.toFixed(2)}
+        </p>
 
         <QuantityControl
           quantity={item.quantity}
@@ -21,9 +23,13 @@ export function CartItem({ item, onUpdateQuantity, onRemove }) {
           onChange={(nextQuantity) => onUpdateQuantity(item.id, nextQuantity)}
         />
 
-        <p>Subtotal: ${subtotal.toFixed(2)}</p>
+        <p className="cart-item-subtotal">Subtotal: ${subtotal.toFixed(2)}</p>
 
-        <button type="button" onClick={() => onRemove(item.id)}>
+        <button
+          className="remove-from-cart"
+          type="button"
+          onClick={() => onRemove(item.id)}
+        >
           Remove
         </button>
       </div>
