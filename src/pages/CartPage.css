@@ -259,28 +259,22 @@
 .continue-shopping:hover {
   background-color: #1d4ed8;
 }
-@media (max-width: 750px) {
-  .cart-page {
-    grid-template-columns: 1fr;
-  }
-
-  .cart-page > h1 {
-    grid-column: auto;
-  }
-
-  .cart-summary {
-    position: static;
-  }
-}
 
 @media (max-width: 750px) {
   .cart-hero {
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .cart-hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
   }
 
   .cart-overview {
     width: 100%;
+    min-width: 0;
   }
 
   .cart-layout {
@@ -289,5 +283,26 @@
 
   .cart-summary {
     position: static;
+  }
+}
+
+@media (max-width: 450px) {
+  .cart-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cart-item-image {
+    width: min(100%, 180px);
+    margin-inline: auto;
+  }
+
+  .cart-item-content {
+    align-items: stretch;
+  }
+
+  .quantity-control {
+    align-self: flex-start;
   }
 }
